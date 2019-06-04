@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="src/user/open_academy.list">
+      <field name="name">src/user/open_academy list</field>
+      <field name="model">src/user/open_academy.src/user/open_academy</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="src/user/open_academy.action_window">
+      <field name="name">src/user/open_academy window</field>
+      <field name="res_model">src/user/open_academy.src/user/open_academy</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="src/user/open_academy.action_server">
+      <field name="name">src/user/open_academy server</field>
+      <field name="model_id" ref="model_src/user/open_academy_src/user/open_academy"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="src/user/open_academy" id="src/user/open_academy.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="src/user/open_academy.menu_1" parent="src/user/open_academy.menu_root"/>
+    <menuitem name="Menu 2" id="src/user/open_academy.menu_2" parent="src/user/open_academy.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="src/user/open_academy.menu_1_list" parent="src/user/open_academy.menu_1"
+              action="src/user/open_academy.action_window"/>
+    <menuitem name="Server to list" id="src/user/open_academy" parent="src/user/open_academy.menu_2"
+              action="src/user/open_academy.action_server"/>
+    -->
+  </data>
+</odoo>
