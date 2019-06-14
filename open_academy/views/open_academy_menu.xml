@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="open_academy_menu" 
+              name="Open Academy" />
+
+    <act_window id="action_open_academy_course"
+      name="Courses"
+      res_model="open.academy"
+      view_mode="tree,form"
+	/>
+    
+    <field name="context" eval="{'search_default_level': 1}"/>
+    
+    <act_window id="action_open_academy_session"
+      name="Sessions"
+      res_model="open.academy"
+      view_mode="tree,form"
+	/>
+
+    <menuitem id="menu_courses"
+          name="Courses"
+	      action="action_open_academy_course"
+          parent="open_academy.open_academy_menu" />
+    />
+
+    <menuitem id="menu_session"
+          name="Session"
+	      action="action_open_academy_session"
+          parent="open_academy.open_academy_menu" />
+    />
+
+</odoo>

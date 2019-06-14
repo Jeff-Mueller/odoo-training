@@ -2,9 +2,19 @@
 
 from odoo import models, fields, api
 
-# class OpenAcademy(models.Model):
-#     _name = 'src/user/open_academy.src/user/open_academy'
+class Course(models.Model):
+    _name = 'open_academy.course'  # Convention model.name
+    _description = 'Course'
 
+    name = fields.Char(string='Title', required=True)
+    description = fields.Text()
+    active = fields.Boolean(string='Active?', default=True)
+    level = fields.Selection([
+        ('1', 'Freshman'),
+        ('2', 'Sophmore'),
+        ('3', 'Junior'),
+        ('4', 'Senior')
+    ],string='Difficulty')
 #     name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
